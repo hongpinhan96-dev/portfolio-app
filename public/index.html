@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- 背景動態紫漸層光暈泡泡 -->
   <div class="bg-glow glow-1"></div>
   <div class="bg-glow glow-2"></div>
   <div class="bg-glow glow-3"></div>
@@ -16,14 +15,13 @@
   <!-- 頂部導覽列 -->
   <header class="navbar">
     <div class="logo">Pinhann<span>.</span></div>
-    <!-- 修正點 1：將 ID 改為 openLoginModal -->
     <button id="openLoginModal" class="glass-btn"><i class="fa-solid fa-user-lock"></i> 管理者登入</button>
   </header>
 
   <!-- 主要內容區：透明泡泡玻璃網格 -->
   <main class="container">
 
-    <!-- 1. 個人資訊泡泡 -->
+    <!-- 1. 個人資訊區 -->
     <section class="glass-card profile-card">
       <div class="profile-header">
         <div class="avatar-wrapper">
@@ -49,7 +47,7 @@
       <button id="editBtn" class="glass-btn primary-btn hidden"><i class="fa-solid fa-pen-to-square"></i> 編輯個人資料</button>
     </section>
 
-    <!-- 2. 專業技能泡泡 -->
+    <!-- 2. 專業技能區 -->
     <section class="glass-card skills-card">
       <h2><i class="fa-solid fa-code"></i> 核心技能與技術 stack</h2>
       <div class="skills-grid">
@@ -72,29 +70,45 @@
       </div>
     </section>
 
-    <!-- 3. 精選作品集泡泡 -->
-    <section class="glass-card projects-card">
-      <h2><i class="fa-solid fa-laptop-code"></i> 特色專案與經歷</h2>
-      <div class="projects-grid">
-        <div class="project-box">
-          <div class="project-icon"><i class="fa-solid fa-cow"></i></div>
-          <h3>火車訂票系統製作</h3>
-          <div class="project-tech"><span>Bootstrap</span><span>PHP</span><span>MySQL</span></div>
-        </div>
-        <div class="project-box">
-          <div class="project-icon"><i class="fa-solid fa-border-all"></i></div>
-          <h3>LED Matrix 動畫矩陣系統</h3>
-          <p>基於 Logisim 設計之數位邏輯電路專案，實現自訂圖案陣列與多段式動態顯示邏輯。</p>
-          <div class="project-tech"><span>Logisim</span><span>Digital Logic</span></div>
-        </div>
-        <div class="project-box">
-          <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
-          <h3>IEEE 754 浮點數轉換器</h3>
-          <p>使用 Python 開發的單精度浮點數分析工具，可解析 32-bit 十六進位轉換為科學記號。</p>
-          <div class="project-tech"><span>Python</span><span>IEEE 754</span></div>
-        </div>
+    <!-- 3. 精選作品集區 -->
+  <section class="glass-card projects-card">
+  <h2><i class="fa-solid fa-laptop-code"></i> 特色專案與經歷</h2>
+  
+  <div class="projects-grid">
+    <!-- 專案 1：火車訂票系統 -->
+    <div class="project-box">
+      <div class="project-icon"><i class="fa-solid fa-train"></i></div>
+      <h3>網頁程式設計與應用：火車訂票系統製作</h3>
+      <div class="project-tech">
+        <span>Bootstrap</span>
+        <span>PHP</span>
+        <span>MySQL</span>
       </div>
-    </section>
+    </div>
+
+    <!-- 專案 2：LED 動畫矩陣系統 -->
+    <div class="project-box">
+      <div class="project-icon"><i class="fa-solid fa-border-all"></i></div>
+      <h3>LED 動畫矩陣系統</h3>
+      <p>基於 Logisim 設計之數位邏輯電路專案，實現自訂圖案陣列與多段式動態顯示邏輯。</p>
+      <div class="project-tech">
+        <span>Logisim</span>
+        <span>Digital Logic</span>
+      </div>
+    </div>
+
+    <!-- 專案 3：IEEE 754 浮點數轉換器 -->
+    <div class="project-box">
+      <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+      <h3>IEEE 754 浮點數轉換器</h3>
+      <p>使用 Python 開發的單精度浮點數分析工具，可解析 32-bit 十六進位轉換為科學記號。</p>
+      <div class="project-tech">
+        <span>Python</span>
+        <span>IEEE 754</span>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- 4. 聯絡與社群互動泡泡 -->
     <section class="glass-card contact-card">
