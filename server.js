@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
@@ -10,13 +10,16 @@ app.use(cors());
 app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
-const JWT_SECRET = process.env.JWT_SECRET || 'secret';
-// 新增 MongoDB 預設連線位置
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/portfolio';
+const JWT_SECRET = process.env.JWT_SECRET
+const MONGO_URI = process.env.MONGO_URI 
+const ADMIN_USER = process.env.ADMIN_USER
+const ADMIN_PASS = process.env.ADMIN_PASS
 
-// 新增預設管理者帳號密碼
-const ADMIN_USER = process.env.ADMIN_USER || 'pinhann';
-const ADMIN_PASS = process.env.ADMIN_PASS || 'password123';
+if (!JWT_SECRET || !MONGO_URI || !ADMIN_USER || !ADMIN_PASS) {
+  console.error('CRITICAL ERROR: Required environment variables are missing!');
+  process.exit(1);
+}
+
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB 連線成功！'))
