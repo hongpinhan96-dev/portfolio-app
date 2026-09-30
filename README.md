@@ -8,10 +8,10 @@
 
 ```mermaid
 graph TD
-    Client[訪客 / 管理員 瀏覽器] -->|HTTP 請求 Port 3000| Backend[Node.js Express 後端容器]
+    Client["訪客 / 管理員 瀏覽器"] -->|HTTP 請求 Port 3000| Backend["Node.js Express 後端容器"]
     
-    subgraph Docker Bridge Network (隔離網路)
-        Backend -->|內部域名 mongodb:27017| Database[(MongoDB 6.0 資料庫容器)]
+    subgraph DockerBridge["Docker Bridge Network (隔離網路)"]
+        Backend -->|內部域名 mongodb:27017| Database[("MongoDB 6.0 資料庫容器")]
     end
 
     classDef container fill:#2d3748,stroke:#4a5568,color:#fff;
