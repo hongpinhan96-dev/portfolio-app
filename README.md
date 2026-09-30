@@ -33,18 +33,15 @@ graph TD
 
 ## 🚀 4. 快速開始 / 安裝步驟 (Quick Start)
 
-### 1. Clone Repository
-
+1.Clone Repository :
 git clone [https://github.com/hongpinhan96-dev/portfolio-app.git](https://github.com/hongpinhan96-dev/portfolio-app.git)
 cd portfolio-app
 
-2. 設定環境變數 
+2.設定環境變數 : 
+
 複製專案提供的範例環境變數檔 .env.example 並建立 .env :
-
 cp .env.example .env
-
 開啟 .env 檔案並設定屬於你的安全金鑰與密碼：
-
 PORT=3000
 MONGO_ROOT_USER=your_mongo_user
 MONGO_ROOT_PASS=your_mongo_password
@@ -52,9 +49,8 @@ JWT_SECRET=your_jwt_secret
 ADMIN_USER=your_admin_user
 ADMIN_PASS=your_admin_password
 
-3. 使用 Docker Compose 一鍵啟動 :
+3.使用 Docker Compose 一鍵啟動 :
 docker compose up -d --build
-
 啟動完成後，開啟瀏覽器造訪 http://localhost:3000 (或 http://你的伺服器IP:3000) 即可看到作品集網站！
 
 ---
@@ -76,10 +72,10 @@ docker compose up -d --build
 
 ---
 
-6. 資安與部署最佳實踐 (Security & Best Practices)
+##    6. 資安與部署最佳實踐 (Security & Best Practices)
 
-1. 環境變數強制驗證 (Strict ENV Validation)：
-   
+1.環境變數強制驗證 (Strict ENV Validation)：
+
 後端 `server.js` 啟動時會嚴格檢查關鍵環境變數。
 若未提供 .env 變數（如未設定 `JWT_SECRET` 或 `MONGO_URI`），程式會立即停機報錯 (`process.exit(1)`)，杜絕任何預設備援金鑰被預測的風險。
 
